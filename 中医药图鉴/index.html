@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>中医药图鉴</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(C:/Users/user/Desktop/中医药图鉴/图片/image.jpg);
+        background-size:cover;
+        background-position: center;
+      }
+ 
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+      }
+      
+        h1{
+        margin-bottom: 70px;
+        font-size: 35px;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      label {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      
+      input[type=text] {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+      
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+      
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="header">
+    <form>
+        <h1>中医药图鉴</h1>
+      <label for="medicineName">输入中药材名称：</label>
+      <input type="text" id="medicineName" name="medicineName" placeholder="当归，党参..">
+      <button type="button" onclick="searchMedicine()">搜索</button>
+    </form>
+      </div>
+    <script>
+      function searchMedicine() {
+        var medicineName = document.getElementById("medicineName").value;
+        var filePath ="C:/Users/user/Desktop/中医药图鉴/中药材页面/" + medicineName + ".html";
+        window.location.href = filePath;
+      }
+        
+    </script>
+  </body>
+</html>
